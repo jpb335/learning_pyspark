@@ -1,3 +1,13 @@
+"""
+Second Chapter
+
+Goal:
+Use basic grouping functionality to produce higher-level overviews of data
+
+This will generate and then read in a CSV of data containing the number of friends for people of different ages.  The
+summary will show the average number of friends per age in the dataset.
+"""
+
 import csv
 import random
 import os
