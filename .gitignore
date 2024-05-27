@@ -1,3 +1,7 @@
 # pycharm
 .idea
 .idea/*
+
+# Do not commit ml-100k
+resources/ml-100k
+resources/ml-100k/*

@@ -27,10 +27,10 @@ black .
 ```
 
 ## Dataset
-Much of the work in this repository is based on the Movie Lens 100k dataset.  At time of writing, this dataset can be downloaded in the following manner (for Linux)
+Some of the work in this repository is based on the Movie Lens 100k dataset which won't be saved into the repo.  At time of writing, this dataset can be downloaded in the following manner (for Linux)
 
 ```bash
 wget https://files.grouplens.org/datasets/movielens/ml-100k.zip
-unzip ml-100k.zip
+unzip ml-100k.zip -d resources/ml-100k
 rm ml-100k.zip
 ```
