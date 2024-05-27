@@ -4,7 +4,7 @@ from pyspark import SparkConf, SparkContext
 from pyspark.sql import SparkSession, DataFrameReader
 from pyspark.sql.types import FloatType
 
-FILE_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), "1800.csv")
+FILE_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), "../resources/1800.csv")
 
 
 MIN_WEATHER_TAG = "TMIN"
