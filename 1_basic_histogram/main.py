@@ -1,3 +1,13 @@
+"""
+First Chapter
+
+Goal:
+Read in delimited file and show simple histogram
+
+This will read in a set of movie data and show, using both RDD and Dataframes, a basic
+histogram of movie reviews by "stars" (1-5)
+"""
+
 import os
 import collections
 

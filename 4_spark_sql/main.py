@@ -1,3 +1,12 @@
+"""
+Chapter 4
+
+Goal:
+Shows the use of Spark SQL
+
+This will read in a file to a Spark SQL view and show the average friends per age group using Spark SQL
+"""
+
 import os.path
 
 from pyspark import SparkContext, SparkConf
@@ -10,7 +19,7 @@ FILE_LOCATION = os.path.join(
 
 
 def main():
-    conf = SparkConf().setMaster("local").setAppName("Min_Weather")
+    conf = SparkConf().setMaster("local").setAppName("Spark_SQL")
     sc = SparkContext(conf=conf)
 
     session = SparkSession(sparkContext=sc)
