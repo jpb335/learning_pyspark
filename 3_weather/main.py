@@ -10,6 +10,7 @@ FILE_PATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), "1800.csv"
 MIN_WEATHER_TAG = "TMIN"
 MAX_WEATHER_TAG = "TMAX"
 
+
 def main():
     conf = SparkConf().setMaster("local").setAppName("Min_Weather")
     sc = SparkContext(conf=conf)

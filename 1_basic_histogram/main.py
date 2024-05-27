@@ -4,9 +4,11 @@ import collections
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import DataFrameReader, SparkSession
 
-FILE_LOCATION = os.path.abspath(os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "../resources/ml-100k/u.data"
-))
+FILE_LOCATION = os.path.abspath(
+    os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "../resources/ml-100k/u.data"
+    )
+)
 
 
 def main():
@@ -53,7 +55,9 @@ def _run_dataframe(spark_context: SparkContext):
 
 def _check_resources_exists():
     if not os.path.exists(FILE_LOCATION):
-        raise FileNotFoundError(f"Expected ml-100k dataset in {FILE_LOCATION}.  See README for download instructions")
+        raise FileNotFoundError(
+            f"Expected ml-100k dataset in {FILE_LOCATION}.  See README for download instructions"
+        )
 
 
 if __name__ == "__main__":
