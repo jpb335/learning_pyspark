@@ -23,6 +23,7 @@ def main():
 
     input_df = spark_session.read.text(FILE_LOCATION)
 
+    # Split the text on words only and explode each into a row
     words = input_df.select(
         functions.explode(functions.split(input_df.value, "\\W+")).alias("word")
     )
