@@ -6,7 +6,6 @@ Read in delimited file and show the most popular (i.e. most rated rather than mo
 """
 
 import os
-import collections
 
 from pyspark.sql import SparkSession, functions
 from pyspark.sql.types import StructType, StructField, IntegerType, LongType, StringType
