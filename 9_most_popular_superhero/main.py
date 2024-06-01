@@ -6,14 +6,10 @@ Advanced usage of processing text files
 
 Show the most popular superhero (by number of connections)
 """
-
-import codecs
-import csv
 import os
-from typing import Dict
 
 from pyspark.sql import SparkSession, functions
-from pyspark.sql.types import StructType, StructField, IntegerType, LongType, StringType
+from pyspark.sql.types import StructType, StructField, IntegerType, StringType
 
 SUPERHERO_GRAPH_FILE_LOCATION = os.path.abspath(
     os.path.join(

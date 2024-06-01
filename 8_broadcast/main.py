@@ -14,7 +14,7 @@ import os
 from typing import Dict
 
 from pyspark.sql import SparkSession, functions
-from pyspark.sql.types import StructType, StructField, IntegerType, LongType, StringType
+from pyspark.sql.types import StructType, StructField, IntegerType, LongType
 
 RATING_FILE_LOCATION = os.path.abspath(
     os.path.join(
