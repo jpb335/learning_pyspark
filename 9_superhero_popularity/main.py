@@ -6,6 +6,7 @@ Advanced usage of processing text files
 
 Show the most popular superhero (by number of connections)
 """
+
 import os
 
 from pyspark.sql import SparkSession, functions
@@ -63,6 +64,27 @@ def main():
     print(
         f"{most_popular_name[0]} is the most popular with {most_popular['connections_count']} connections"
     )
+
+    # Find the most obscure heroes.  This will print all of the lowest connection superheroes
+    most_obscure = connections.groupBy("superhero_id").agg(
+        functions.sum("connections_count").alias("connections_count")
+    )
+
+    minimum_connection_count = most_obscure.agg(
+        functions.min("connections_count")
+    ).first()[0]
+
+    minimum_connection_heroes = most_obscure.filter(
+        functions.col("connections_count") == minimum_connection_count
+    )
+
+    with_names = minimum_connection_heroes.join(superhero_names, on="superhero_id")
+
+    print(
+        f"Smallest number of connections is {minimum_connection_count}.  Those heroes are:\n"
+    )
+    for name in with_names.select(functions.collect_list("superhero_name")).first()[0]:
+        print(f"{name}")
 
 
 if __name__ == "__main__":
