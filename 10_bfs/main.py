@@ -12,7 +12,6 @@ from enum import Enum
 from typing import Tuple, List
 
 from pyspark import SparkConf, SparkContext
-from pyspark.sql import SparkSession
 
 SUPERHERO_GRAPH_FILE_LOCATION = os.path.abspath(
     os.path.join(
